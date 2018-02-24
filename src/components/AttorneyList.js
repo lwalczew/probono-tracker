@@ -1,17 +1,16 @@
 import React from 'react';
 import {Icon, Table} from 'semantic-ui-react';
-import AttorneyDetailModal from './AttorneyDetailModal'
 
 const AttorneyList = (props) => {
   
-  const handleClick = () => console.log('hi')
+  const handleClick = (e) => {props.editAttorneyForm(props.visibleAttorneys.filter(atty => atty.id === e.target.id)[0]); props.openAttorneyModal(e.target.id)}
 
   const tableRows = props.visibleAttorneys.map(attorney => (
-        <Table.Row key={attorney.id} onClick={handleClick}>
-          <Table.Cell><AttorneyDetailModal attorney={attorney}>{attorney.lastName}, {attorney.firstName}</AttorneyDetailModal></Table.Cell>
-          <Table.Cell>{attorney.office}</Table.Cell>
-          <Table.Cell>{attorney.level}</Table.Cell>
-          <Table.Cell>{attorney.practiceGroup}</Table.Cell>
+        <Table.Row key={attorney.id} attorney={attorney.id} onClick={handleClick} className='addHover'>
+          <Table.Cell id={attorney.id}>{attorney.lastName}, {attorney.firstName}</Table.Cell>
+          <Table.Cell id={attorney.id}>{attorney.office}</Table.Cell>
+          <Table.Cell id={attorney.id}>{attorney.level} ({attorney.attorneyStartYear})</Table.Cell>
+          <Table.Cell id={attorney.id}>{attorney.practiceGroup}</Table.Cell>
         </Table.Row>
   ))
 
@@ -23,7 +22,7 @@ const AttorneyList = (props) => {
           <Table.Row>
             <Table.HeaderCell>Name</Table.HeaderCell>
             <Table.HeaderCell>Office</Table.HeaderCell>
-            <Table.HeaderCell>Level</Table.HeaderCell>
+            <Table.HeaderCell>Level (Start Year)</Table.HeaderCell>
             <Table.HeaderCell>Practice Group</Table.HeaderCell>
           </Table.Row>
         </Table.Header>

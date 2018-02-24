@@ -1,6 +1,6 @@
 export const startData = [
   {
-    id: 1,
+    id: '1',
     firstName: 'Erin',
     lastName: 'Walczewski',
     office: 'Boston',
@@ -8,8 +8,8 @@ export const startData = [
     attorneyStartYear: '2010',
     cooleyStartYear: '2010',
     practiceGroup: 'Venture Capital',
-    competencies: ['Low-income entrepreneurs', 'Criminal Defense', 'Immigration'],
-    inSearchOf: ['Immigration'],
+    competencies: ['Asylum','Immigrants\' rights'],
+    inSearchOf: ['Asylum','Immigrants\' rights'],
     projects: [
       {
         client: 'Kids in Need of Defense (KIND)',
@@ -20,7 +20,7 @@ export const startData = [
     ]
   },
   {
-    id: 2,
+    id: '2',
     firstName: 'Karen',
     lastName: 'Burhans',
     office: 'San Francisco',
@@ -28,8 +28,8 @@ export const startData = [
     attorneyStartYear: '2010',
     cooleyStartYear: '2010',
     practiceGroup: 'Business Litigation',
-    competencies: ['Immigration', 'Civil Defense', 'Education'],
-    inSearchOf: ['Immigration', 'Education'],
+    competencies: ['Asylum','Immigrants\' rights'],
+    inSearchOf: ['Asylum','Immigrants\' rights'],
     projects: [
       {
         client: 'Kids in Need of Defense (KIND)',
@@ -40,7 +40,7 @@ export const startData = [
     ]
   },
   {
-    id: 3,
+    id: '3',
     firstName: 'Mark',
     lastName: 'Pitchford',
     office: 'Palo Alto',
@@ -48,12 +48,12 @@ export const startData = [
     attorneyStartYear: '1981',
     cooleyStartYear: '1981',
     practiceGroup: 'General Corporate',
-    competencies: ['Immigration', 'Civil Defense', 'Education'],
-    inSearchOf: ['Immigration', 'Education'],
+    competencies: ['Asylum', 'Education','Immigrants\' rights'],
+    inSearchOf: ['Asylum','Immigrants\' rights'],
     projects: []
   },
   {
-    id: 4,
+    id: '4',
     firstName: 'Joe',
     lastName: 'Conroy',
     office: 'Reston',
@@ -61,14 +61,21 @@ export const startData = [
     attorneyStartYear: '1981',
     cooleyStartYear: '1981',
     practiceGroup: 'General Corporate',
-    competencies: ['Management'],
-    inSearchOf: ['Management'],
+    competencies: ['Disability rights','Elder abuse'],
+    inSearchOf: ['Asylum'],
     projects: []
   }
 ];
 
-export const attorneyModalData = {
-  
+export const blankVisibilityFilter = {
+  firstName: '',
+  lastName: '',
+  office: [],
+  level: '',
+  practiceGroup: '',
+  competencies: [],
+  inSearchOf: [],
+  projects: []
 }
 
 export const levels = [
@@ -121,6 +128,38 @@ export const businessPracticeGroups = [
 ]
 
 export const competencyOptions = [
-  {key: 'immigration', text: 'Immigration', value: 'Immigration'},
-  {key: 'education', text: 'Education', value: 'Education'}
+  { key: 'Appeals', text: 'Appeals', value: 'Appeals' },
+  { key: 'Asylum', text: 'Asylum', value: 'Asylum' },
+  { key: 'Bankruptcy', text: 'Bankruptcy', value: 'Bankruptcy' },
+  { key: 'Capital punishment', text: 'Capital punishment', value: 'Capital punishment' },
+  { key: 'Children\'s rights', text: 'Children\'s rights', value: 'Children\'s rights' },
+  { key: 'Civil rights', text: 'Civil rights', value: 'Civil rights' },
+  { key: 'Constitutional law', text: 'Constitutional law', value: 'Constitutional law' },
+  { key: 'Contract law', text: 'Contract law', value: 'Contract law' },
+  { key: 'Corporate governance', text: 'Corporate governance', value: 'Corporate governance' },
+  { key: 'Criminal law', text: 'Criminal law', value: 'Criminal law' },
+  { key: 'Disability rights', text: 'Disability rights', value: 'Disability rights' },
+  { key: 'Domestic violence', text: 'Domestic violence', value: 'Domestic violence' },
+  { key: 'Education', text: 'Education', value: 'Education' },
+  { key: 'Elder abuse', text: 'Elder abuse', value: 'Elder abuse' },
+  { key: 'Employment law', text: 'Employment law', value: 'Employment law' },
+  { key: 'Entity formation', text: 'Entity formation', value: 'Entity formation' },
+  { key: 'Environmental law', text: 'Environmental law', value: 'Environmental law' },
+  { key: 'First Amendment', text: 'First Amendment', value: 'First Amendment' },
+  { key: 'Guardianship', text: 'Guardianship', value: 'Guardianship' },
+  { key: 'Housing', text: 'Housing', value: 'Housing' },
+  { key: 'Homeless advocacy', text: 'Homeless advocacy', value: 'Homeless advocacy' },
+  { key: 'Human rights', text: 'Human rights', value: 'Human rights' },
+  { key: 'Immigrants\' rights', text: 'Immigrants\' rights', value: 'Immigrants\' rights' },
+  { key: 'Intellectual property', text: 'Intellectual property', value: 'Intellectual property' },
+  { key: 'LGBT rights', text: 'LGBT rights', value: 'LGBT rights' },
+  { key: 'Mental health advocacy', text: 'Mental health advocacy', value: 'Mental health advocacy' },
+  { key: 'Micro-enterprise advising', text: 'Micro-enterprise advising', value: 'Micro-enterprise advising' },
+  { key: 'Micro-finance', text: 'Micro-finance', value: 'Micro-finance' },
+  { key: 'Nonprofit advising', text: 'Nonprofit advising', value: 'Nonprofit advising' },
+  { key: 'Prisoners\' rights', text: 'Prisoners\' rights', value: 'Prisoners\' rights' },
+  { key: 'Public benefits', text: 'Public benefits', value: 'Public benefits' },
+  { key: 'Real estate', text: 'Real estate', value: 'Real estate' },
+  { key: 'Veterans\' advocacy', text: 'Veterans\' advocacy', value: 'Veterans\' advocacy' },
+  { key: 'Women\'s rights', text: 'Women\'s rights', value: 'Women\'s rights' }
 ]

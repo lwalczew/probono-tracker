@@ -29,3 +29,7 @@
 .addHover:hover {
   cursor: pointer;
 }
+
+.redHover:hover {
+  color: red !important;
+}

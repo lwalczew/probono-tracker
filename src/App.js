@@ -4,6 +4,7 @@ import {Container, Grid} from 'semantic-ui-react';
 import AppHeader from './components/AppHeader';
 import AttorneyListContainer from './components/AttorneyListContainer';
 import VisibilityFilterContainer from './components/VisibilityFilterContainer';
+import AttorneyModalContainer from './components/AttorneyModalContainer';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             </Grid.Column>
           </Grid>
         </Container>
+        <AttorneyModalContainer />
       </div>
     );
   }

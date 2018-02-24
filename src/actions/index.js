@@ -18,7 +18,16 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
-export const toggleAttorneyModal = isOpen => ({
-  type: 'TOGGLE_ATTORNEY_MODAL',
-  isOpen
+export const openAttorneyModal = id => ({
+  type: 'OPEN_ATTORNEY_MODAL',
+  id
+})
+
+export const closeAttorneyModal = {
+  type: 'CLOSE_ATTORNEY_MODAL'
+}
+
+export const editAttorneyForm = attorney => ({
+  type: 'EDIT_ATTORNEY_FORM',
+  attorney
 })

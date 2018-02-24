@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import AttorneyList from './AttorneyList';
+import {openAttorneyModal, editAttorneyForm} from './../actions';
 
 const getVisibleAttorneys = (attorneys, visibilityFilter) => {
   return attorneys
@@ -11,14 +12,31 @@ const getVisibleAttorneys = (attorneys, visibilityFilter) => {
     .filter(attorney => visibilityFilter.competencies.length > 0 ? attorney.competencies.reduce((a,b) => a + '.,.' + b).toUpperCase().includes(visibilityFilter.competencies.reduce((a,b) => a + '.,.' + b).toUpperCase()) : true)
     .filter(attorney => visibilityFilter.inSearchOf.length > 0 ? attorney.inSearchOf.reduce((a,b) => a + '.,.' + b).toUpperCase().includes(visibilityFilter.inSearchOf.reduce((a,b) => a + '.,.' + b).toUpperCase()) : true)
     .filter(attorney => visibilityFilter.projects.length > 0 ? attorney.projects.reduce((a, project) => a + `${project.client}.,.${project.notes}.,.`, '').toUpperCase().includes(visibilityFilter.projects.toUpperCase()) : true)
+    .sort((a,b) => {
+      const nameA = a.lastName.toUpperCase();
+      const nameB = b.lastName.toUpperCase();
+      if (nameA < nameB) return -1;
+      if (nameB < nameA) return 1;
+      return 0;
+    })
 };
 
 const mapStateToProps = state => ({
   visibleAttorneys: getVisibleAttorneys(state.attorneys, state.visibilityFilter)
 });
 
+const mapDispatchToProps = dispatch => ({
+  openAttorneyModal: (id) => {
+    dispatch(openAttorneyModal(id))
+  },
+  editAttorneyForm: attorney => {
+    dispatch(editAttorneyForm(attorney))
+  }
+})
+
 const AttorneyListContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(AttorneyList);
 
 export default AttorneyListContainer;
