@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import VisibilityFilter from './VisibilityFilter';
-import {setVisibilityFilter} from './../actions';
+import {setVisibilityFilter, clearVisibilityFilter} from './../actions';
 
 const mapStateToProps = state => ({
   visibilityFilter: state.visibilityFilter
@@ -9,6 +9,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => ({
   setVisibilityFilter: visibilityFilter => {
     dispatch(setVisibilityFilter(visibilityFilter))
+  },
+  clearVisibilityFilter: () => {
+    dispatch(clearVisibilityFilter)
   }
 });
 

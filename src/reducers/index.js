@@ -3,12 +3,14 @@ import attorneys from './attorneyReducers';
 import visibilityFilter from './visibilityFilterReducers';
 import attorneyModal from './attorneyModalReducers';
 import attorneyForm from './attorneyFormReducers';
+import notesEditable from './notesEditableReducer';
 
 const proBonoReducerCombo = combineReducers({
   attorneys,
   visibilityFilter,
   attorneyModal,
-  attorneyForm
+  attorneyForm,
+  notesEditable
 })
 
 export default proBonoReducerCombo;

@@ -31,5 +31,6 @@
 }
 
 .redHover:hover {
-  color: red !important;
+  background-color: #b21e1e !important;
+  color: white !important;
 }

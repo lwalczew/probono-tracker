@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import AttorneyModal from './AttorneyModal';
-import {closeAttorneyModal} from './../actions';
+import {closeAttorneyModal, makeNotesNotEditable} from './../actions';
 
 const mapStateToProps = state => ({
   attorneyModal: state.attorneyModal,
@@ -10,6 +10,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   closeAttorneyModal: () => {
     dispatch(closeAttorneyModal)
+  },
+  makeNotesNotEditable: () => {
+    dispatch(makeNotesNotEditable)
   }
 })
 

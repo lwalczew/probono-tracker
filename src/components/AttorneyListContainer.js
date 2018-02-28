@@ -11,7 +11,7 @@ const getVisibleAttorneys = (attorneys, visibilityFilter) => {
     .filter(attorney => visibilityFilter.practiceGroup.length > 0 ? attorney.practiceGroup.toUpperCase().includes(visibilityFilter.practiceGroup.toUpperCase()) : true)
     .filter(attorney => visibilityFilter.competencies.length > 0 ? attorney.competencies.reduce((a,b) => a + '.,.' + b).toUpperCase().includes(visibilityFilter.competencies.reduce((a,b) => a + '.,.' + b).toUpperCase()) : true)
     .filter(attorney => visibilityFilter.inSearchOf.length > 0 ? attorney.inSearchOf.reduce((a,b) => a + '.,.' + b).toUpperCase().includes(visibilityFilter.inSearchOf.reduce((a,b) => a + '.,.' + b).toUpperCase()) : true)
-    .filter(attorney => visibilityFilter.projects.length > 0 ? attorney.projects.reduce((a, project) => a + `${project.client}.,.${project.notes}.,.`, '').toUpperCase().includes(visibilityFilter.projects.toUpperCase()) : true)
+    .filter(attorney => visibilityFilter.notes.length > 0 ? attorney.notes.toUpperCase().includes(visibilityFilter.notes.toUpperCase()) : true)
     .sort((a,b) => {
       const nameA = a.lastName.toUpperCase();
       const nameB = b.lastName.toUpperCase();

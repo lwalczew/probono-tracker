@@ -18,6 +18,10 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
+export const clearVisibilityFilter = {
+  type: 'CLEAR_VISIBILITY_FILTER'
+}
+
 export const openAttorneyModal = id => ({
   type: 'OPEN_ATTORNEY_MODAL',
   id
@@ -31,3 +35,11 @@ export const editAttorneyForm = attorney => ({
   type: 'EDIT_ATTORNEY_FORM',
   attorney
 })
+
+export const makeNotesEditable = {
+  type: 'MAKE_NOTES_EDITABLE'
+}
+
+export const makeNotesNotEditable = {
+  type: 'MAKE_NOTES_NOT_EDITABLE'
+}

@@ -10,14 +10,7 @@ export const startData = [
     practiceGroup: 'Venture Capital',
     competencies: ['Asylum','Immigrants\' rights'],
     inSearchOf: ['Asylum','Immigrants\' rights'],
-    projects: [
-      {
-        client: 'Kids in Need of Defense (KIND)',
-        startDate: '11/5/2011',
-        endDate: '',
-        notes: 'Marcos. Very difficult case.'
-      }
-    ]
+    notes: 'KIND: Marcos'
   },
   {
     id: '2',
@@ -30,14 +23,7 @@ export const startData = [
     practiceGroup: 'Business Litigation',
     competencies: ['Asylum','Immigrants\' rights'],
     inSearchOf: ['Asylum','Immigrants\' rights'],
-    projects: [
-      {
-        client: 'Kids in Need of Defense (KIND)',
-        startDate: '11/5/2011',
-        endDate: '',
-        notes: 'Marcos. Very difficult case.'
-      }
-    ]
+    notes: 'KIND: Marcos'
   },
   {
     id: '3',
@@ -50,7 +36,7 @@ export const startData = [
     practiceGroup: 'General Corporate',
     competencies: ['Asylum', 'Education','Immigrants\' rights'],
     inSearchOf: ['Asylum','Immigrants\' rights'],
-    projects: []
+    notes: 'Big Dog'
   },
   {
     id: '4',
@@ -63,7 +49,7 @@ export const startData = [
     practiceGroup: 'General Corporate',
     competencies: ['Disability rights','Elder abuse'],
     inSearchOf: ['Asylum'],
-    projects: []
+    notes: 'Biggest Dog'
   }
 ];
 
@@ -75,7 +61,7 @@ export const blankVisibilityFilter = {
   practiceGroup: '',
   competencies: [],
   inSearchOf: [],
-  projects: []
+  notes: ''
 }
 
 export const levels = [

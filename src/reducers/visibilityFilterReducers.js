@@ -5,6 +5,9 @@ const visibilityFilter = (state = blankVisibilityFilter, action) => {
     case 'SET_VISIBILITY_FILTER':
       return {...state, [action.filter.name]: action.filter.value}
 
+    case 'CLEAR_VISIBILITY_FILTER':
+      return blankVisibilityFilter
+
     default:
       return state
   }

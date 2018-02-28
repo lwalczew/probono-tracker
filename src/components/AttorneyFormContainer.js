@@ -1,10 +1,11 @@
 import {connect} from 'react-redux';
 import AttorneyForm from './AttorneyForm';
-import {editAttorney, editAttorneyForm, closeAttorneyModal} from './../actions';
+import {editAttorney, editAttorneyForm, closeAttorneyModal, makeNotesEditable, makeNotesNotEditable} from './../actions';
 
 const mapStateToProps = state => ({
   attorneyModal: state.attorneyModal,
-  attorneyForm: state.attorneyForm
+  attorneyForm: state.attorneyForm,
+  notesEditable: state.notesEditable
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -16,6 +17,12 @@ const mapDispatchToProps = dispatch => ({
   },
   closeAttorneyModal: () => {
     dispatch(closeAttorneyModal)
+  },
+  makeNotesEditable: () => {
+    dispatch(makeNotesEditable)
+  },
+  makeNotesNotEditable: () => {
+    dispatch(makeNotesNotEditable)
   }
 })
 
